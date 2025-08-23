@@ -1,0 +1,85 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import PostCard from '../../components/PostCard.astro'
+
+import { slugify, formatBlogPosts } from '../../js/utils'
+
+export async function getStaticPaths() {
+  return [
+    {
+        params: { category: slugify("Soft Skills")},
+        props: { name: "Habilidades Blandas" },
+    },
+    {
+        params: { category: slugify("Trends")},
+        props: { name: "Tendencias" },
+    },
+    {
+        params: { category: slugify("Tools")},
+        props: { name: "Herramientas" },
+    },
+    {
+        params: { category: slugify("Anniversaries")},
+        props: { name: "Efemérides" },
+    },
+    {
+        params: { category: slugify("Physics")},
+        props: { name: "Física" },
+    },
+    {
+        params: { category: slugify("Maths")},
+        props: { name: "Mates" },
+    },
+    {
+        params: { category: slugify("Tech")},
+        props: { name: "Tecnología" },
+    },
+    {
+        params: { category: slugify("Fun Facts")},
+        props: { name: "Curiosidades" },
+    },
+    {
+        params: { category: slugify("Findings")},
+        props: { name: "Hallazgos" },
+    },
+    {
+        params: { category: slugify("General")},
+        props: { name: "General" },
+    }
+  ]
+}
+
+const { category } = Astro.params
+const { name } = Astro.props
+
+interface BlogPost {
+  frontmatter: {
+    category: string;
+    [key: string]: any;
+  };
+  url: string;
+  [key: string]: any;
+}
+
+const allPosts = await Astro.glob("../blog/*.md")
+const formattedPosts: BlogPost[] = formatBlogPosts(allPosts)
+
+const filteredPosts = formattedPosts.filter((post: BlogPost) => slugify(post.frontmatter.category) === category)
+---
+
+<MainLayout title={name}>
+	<section class="container" aria-label={`Publicaciones sobre ${name}`}>
+		<h1 class="h1">Publicaciones sobre <span>{name}</span></h1>
+		<div class="post-container">
+			{
+				filteredPosts.map((post) => (
+					<PostCard
+						frontmatter={post.frontmatter}
+						url={post.url}
+						tagType="h3"
+					/>
+				))
+			}
+		</div>
+	</section>
+</MainLayout>
