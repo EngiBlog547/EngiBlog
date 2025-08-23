@@ -1,0 +1,39 @@
+---
+interface PostCategory {
+  frontmatter: {
+    category: string;
+  }
+}
+
+interface CategoryCount {
+  [key: string]: number;
+}
+
+import { formatBlogPosts, slugify } from "../js/utils"
+
+const allPosts = await Astro.glob("../pages/blog/*.md")
+const formattedPosts = formatBlogPosts(allPosts)
+
+const allCategories = formattedPosts.map((cat: PostCategory) => cat.frontmatter.category.toLowerCase()).flat()
+
+const processedCategories = allCategories.reduce((acc: CategoryCount, category: string) => {
+  const value = acc[category] || 0
+
+  return {
+    ...acc,
+    [category]: value + 1
+  }
+}, {})
+
+const { showCount } = Astro.props
+---
+
+<ul class="categories">
+  {
+    Object.entries(processedCategories).map(([key, val]) => (
+      <li>
+        <a class="badge" href={`/category/${slugify(key)}/`}>{key} {showCount && val > 1 ? ` (${val})` : ""}</a>
+      </li>
+    ))
+  }
+</ul>

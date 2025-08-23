@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<footer>
+    <small>
+        &copy; <span id="date"></span>&emsp;|&emsp;<span>Creado con 💜 por <a href="https://github.com/JaxxBalyit">@JaxxBalyit</a></span>
+    </small>
+    <small class="rss">
+        <a class="rss-link" href="/rss.xml">Vista RSS</a>
+        <Icon name="rssIcon" width="20" height="20" />
+    </small>
+</footer>
+
+<script>
+    const dateElement = document.querySelector("#date");
+    if (dateElement) {
+        dateElement.textContent = new Date().getFullYear().toString();
+    }
+</script>
