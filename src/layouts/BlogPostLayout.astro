@@ -1,0 +1,58 @@
+---
+interface PostCategory {
+  frontmatter: {
+    category: string;
+    title: string;
+  }
+}
+
+// Import the MainLayout and BlogHeader
+import MainLayout from "./MainLayout.astro"
+import PostHeader from "../components/PostHeader.astro"
+import CategoryCloud from "../components/CategoryCloud.astro"
+
+import { formatBlogPosts } from "../js/utils"
+import RelatedPosts from "../components/RelatedPosts.astro";
+
+const { frontmatter } = Astro.props
+const { title, description, date, category, author, image } = frontmatter
+
+const allPosts = await Astro.glob("../pages/blog/*.md")
+const formattedPosts = formatBlogPosts(allPosts, {sortByDate: false})
+
+const relatedPosts = formattedPosts.filter((post: PostCategory) => {
+    const postCategory = post.frontmatter.category || '';
+    return postCategory.toLowerCase() === category.toLowerCase()
+  && post.frontmatter.title !== title;
+}).slice(0, 3)
+
+---
+
+<MainLayout 
+    {title} 
+    {description} 
+    image={frontmatter.image} 
+    {frontmatter} 
+    robots={frontmatter.robots}
+>
+    <PostHeader {title} {description} {date} {category} {author} {image}/>
+    <div class="post-content">
+        <div class="content">
+            <slot />
+        </div>
+        <div class="sidebar">
+            <aside class="container" aria-label="Categorías del blog">
+                <h2 class="h3">Categorías</h2>
+                <CategoryCloud/>
+            </aside>
+            {
+                relatedPosts.length > 0 && (
+                    <aside class="container" aria-label="Publicaciones Relacionadas">
+                        <h2 class="h3">Publicaciones Relacionadas</h2>
+                        <RelatedPosts {relatedPosts}/>
+                    </aside>
+                )
+            }
+        </div>
+    </div>
+</MainLayout>
