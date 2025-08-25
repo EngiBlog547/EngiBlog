@@ -2,7 +2,7 @@
   "title": "EngiBlog",
   "description": "Tu blog de confianza para ingenieros",
   "image": {
-    "src": "/images/EngiBlog-logo.jpg",
+    "src": "/images/EngiBlog-logo.png",
     "alt": "EngiBlog"
   }
 }
