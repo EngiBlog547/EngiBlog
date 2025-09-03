@@ -1,0 +1,33 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+
+import Link from "../components/Link.astro"
+---
+
+<MainLayout title="Acerca" description="Página de About">
+	<section class="container about" aria-label="About Me">
+		<img 
+			src="/images/me.jpg" 
+			alt="My photo" 
+			width={200} 
+			height={330}
+			class="hero-image"
+		/>
+		<div class="content">
+			<h1 class="h1">EngiBlog</h1>
+			<p>
+				Estudiante de noveno semestre de Ing. Física. Apasionado, líder, responsable, organizado.
+				Aprendiendo programación, constantemente centrado en la especialización Full-Stack, 
+				autodidacta, tomando cursos para una constante mejoría. Abierto a explorar nuevos 
+				horizontes, y con ambición constante de conocimiento.<br/> También me encuentro 
+				en la continua actualización sobre temas relacionados a la ingeniería, tales como 
+				electrónica, física, matemáticas, entre otros. Estoy realizando algunos proyectos 
+				interesantes, tales como la reparación y actualización de los circuitos periféricos 
+				de un equipo de espectroscopia de alta resolución. <br/>
+				Este blog es un reflejo de todo lo que he aprendido y todo lo que voy a aprender. Espero poder
+				compartirlo contigo, así como mis colaboradores lo harán también.
+			</p>
+			<Link href="mailto:chavez.emmanuel020310@gmail.com" style="primary" text="Contacto"/>
+		</div>
+	</section>
+</MainLayout>
