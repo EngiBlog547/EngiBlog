@@ -10,6 +10,7 @@ interface CategoryCount {
 }
 
 import { formatBlogPosts, slugify } from "../js/utils"
+import { getDisplayName } from "../js/categoryMapping"
 
 const allPosts = await Astro.glob("../pages/blog/*.md")
 const formattedPosts = formatBlogPosts(allPosts)
@@ -32,7 +33,7 @@ const { showCount } = Astro.props
   {
     Object.entries(processedCategories).map(([key, val]) => (
       <li>
-        <a class="badge" href={`/category/${slugify(key)}/`}>{key} {showCount && val > 1 ? ` (${val})` : ""}</a>
+        <a class="badge" href={`/category/${slugify(key)}/`}>{getDisplayName(key)} {showCount && val > 1 ? ` (${val})` : ""}</a>
       </li>
     ))
   }
