@@ -9,6 +9,7 @@ const categoryMap = {
     'anniversaries': 'Efemérides',
     'fun-facts': 'Curiosidades',
     'findings': 'Hallazgos',
+    'ai': 'Inteligencia Artificial',
     'general': 'General'
 };
 
