@@ -21,6 +21,7 @@ Explora nuestros contenidos organizados en diferentes temas:
 🔹 **Tecnología (Tech)** – Innovaciones y desarrollos  
 🔹 **Datos Curiosos (Fun Facts)** – ¡Ingeniería divertida!  
 🔹 **Hallazgos (Findings or Research)** – Descubrimientos relevantes  
+🔹 **Inteligencia Artificial (AI)** – IA generativa y sus aplicaciones   
 🔹 **General** – Todo lo demás relacionado con ingeniería  
 
 ---
