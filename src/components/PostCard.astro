@@ -1,0 +1,46 @@
+---
+import Link from "./Link.astro"
+
+import { slugify, formatDate } from "../js/utils"
+import { getDisplayName } from "../js/categoryMapping"
+
+const { frontmatter, url, tagType } = Astro.props;
+const { category, title, author, date, image, description } = frontmatter
+
+const Tag = tagType
+---
+<!--
+<pre>{JSON.stringify(frontmatter, null, 2)}</pre>
+-->
+
+<article class="card">
+    <small>
+        <a class="badge" href={`/category/${slugify(category)}/`}>{getDisplayName(category)}</a>
+    </small>
+    <a href={url}>
+        <img
+            src={image.src} 
+            alt={image.alt}
+            width={400}
+            height={250}
+        />
+    </a>
+    <div class="content">
+        <div>
+            <Tag class="h3">
+                <a class="title" href={url} aria-hidden="true" tabindex="-1">{title}</a>
+            </Tag>
+            <small class="date">
+                escrito por <a href={`/author/${slugify(author)}/`}>
+                {author}</a> •
+                {formatDate(date)}
+            </small>
+        </div>
+        <p>{description}</p>
+        <Link 
+            href={url} 
+            text="Leer más"
+            style="secondary"
+        />
+    </div>
+</article>

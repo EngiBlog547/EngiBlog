@@ -1,0 +1,24 @@
+---
+import { slugify, formatDate } from "../js/utils"
+import { getDisplayName } from "../js/categoryMapping"
+
+const { category, title, author, date, image } = Astro.props
+---
+
+<header>
+    <div class="container">
+        <div class="categories">
+            <a class="badge" href={`/category/${slugify(category)}/`}>
+                {getDisplayName(category)}
+            </a>
+        </div>
+        <h1 class="h2">{title}</h1>
+        <p>escrito por <a href={`/author/${slugify(author)}/`}>{author}</a> • {formatDate(date)}</p>
+    </div>
+    <img
+        src={image.src} 
+        alt={image.alt}
+        height={550}
+        class="hero-image"
+    />
+</header>
