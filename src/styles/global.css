@@ -496,6 +496,15 @@ button {
   margin-left: 75px;
 }
 
+.instagram {
+  margin-right: 75px;
+}
+
+.ig-logo {
+  transform: translateY(5px);
+  margin-right: -3px;
+}
+
 /* about */
 .about {
   display: grid;
