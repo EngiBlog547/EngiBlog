@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
 title: "¿Windows, Mac o Linux? La batalla definitiva por tu escritorio"
-date: 2025-10-26 # YYYY-MM-DD
+date: 2025-10-26T00:00:00 # YYYY-MM-DD
 author: Emmanuel Chávez
 image: { src: '/images/posts/WallPapers/OS-Battle.png', alt: 'Sistemas Operativos' }
 description: La elección del sistema operativo puede ser un desafío, pero con esta guía, encontrarás la solución perfecta para ti. Tu próxima computadora merece el sistema operativo correcto. Más allá de la estética, elige uno que se adapte a tu flujo de trabajo.

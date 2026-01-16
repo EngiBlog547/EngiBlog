@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
 title: "Nano Banana: El Inicio de la Congruencia Visual en Imágenes Generadas por IA"
-date: 2025-09-17 # YYYY-MM-DD
+date: 2025-09-17T00:00:00 # YYYY-MM-DD
 author: Arturo Najar Alarcón
 image: { src: '/images/posts/WallPapers/CongruenciaAI.png', alt: 'DiezMaya 1' }
 description: "Un análisis sobre cómo los nuevos modelos de IA como Nano Banana están resolviendo el problema de la congruencia visual y qué significa esto para el futuro de la creación de imágenes."
@@ -35,7 +35,7 @@ Ahora, con Nano Banana y Veo3, curiosamente ambas de Google, veo cada vez más c
 Podríamos estar cayendo en una falacia similar al creer que ahora las IAs que aparentan ser más congruentes realmente entienden el objeto que están manipulando o es sólo que ahora cuentan con mucha más información para proceder. <br />
 Si bien ha habido un avance, y a simple vista se podría decir que, en efecto, entienden a los objetos, realmente poniéndonos meticulosos con los resultados seguimos encontrando incongruencias en los resultados de estas máquinas. Pero estas artimañas visuales, cada vez más sofisticadas, nos hacen creer que realmente hay un entendimiento detrás del supuesto razonamiento de las IAs.
 
-Sorprende más cuando Seadream, un modelo (ironicamente) chino, anuncia que su motor es el mejor para la interpretación de texto a imagen. Siendo capaz de generar letreros, subtítulos y descripciones de objetos dentro de una publicidad generada enteramente con IA, sin la necesidad de recurrir a otro editor de texto en imagen como Photoshop o Illustrator. El hecho de que sea capaz de interpretar texto y cada uno de los caracteres que conforman la escritura, que varían según la fuente con la que se escriba, y además mantenga congruencia representa un gran avance para este tipo de tecnologías. Tan sólo hay que imaginar cuántas formas existen para representar la letra “A”. <br />
+Sorprende más cuando Seadream, un modelo (irónicamente) chino, anuncia que su motor es el mejor para la interpretación de texto a imagen. Siendo capaz de generar letreros, subtítulos y descripciones de objetos dentro de una publicidad generada enteramente con IA, sin la necesidad de recurrir a otro editor de texto en imagen como Photoshop o Illustrator. El hecho de que sea capaz de interpretar texto y cada uno de los caracteres que conforman la escritura, que varían según la fuente con la que se escriba, y además mantenga congruencia representa un gran avance para este tipo de tecnologías. Tan sólo hay que imaginar cuántas formas existen para representar la letra “A”. <br />
 Pero ¿cómo es que logran este efecto? ¿Cómo una IA puede diferir entre tantos caracteres y entre tantas formas de representar un mismo símbolo? Y, además, ¿cómo es que logra mantener la congruencia entre el mismo personaje? Ambas cualidades se basan en un mismo principio y es en el reconocimiento de patrones y del “espacio negativo” que es la novedad en este nuevo tipo de modelos.
 
 ## Breve resumen de la historia de las IAs de imagen (hecho con el propio Gemini)

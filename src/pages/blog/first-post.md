@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
 title: "Un Viaje de Resilencia: El Nacimiento de EngiBlog"
-date: 2025-08-20 # YYYY-MM-DD
+date: 2025-08-20T00:00:00 # YYYY-MM-DD
 author: Emmanuel Chávez
 image: { src: '/images/posts/WallPapers/first-post.png', alt: 'First Post' }
 description: El proceso de desarrollo de un blog de ingeniería hecho con Astro para la divulgación de ciencias al alcance de todos.
@@ -11,7 +11,7 @@ category: general
 
 Durante más de un año, este blog ha sido un sueño contenido, aguardando pacientemente su momento de brillar. La vida, con su impredecible vaivén, interpuso obstáculos que no permitían su publicación: rigores de la licenciatura, problemas de salud, pérdidas de seres queridos que desgarraron mi corazón y un sinfín de retos personales. A pesar de ello, cada uno de los retos fue un recordatorio de mi compromiso con este proyecto. EngiBlog no sólo es un blog, es la culminación de innumerables horas de mucho esfuerzo, dedicación y anhelo para crear algo significativo. Este proyecto crea una nueva etapa, un nuevo comienzo. Representa el deseo ardiente de superar las adversidades y seguir construyendo y, no solo para sentirme productivo, sino para encontrar un propósito renovado.
 
-Originalmente se concibió que este espacio fuera un blog personal, pero la reflexión me llevó a un lugar mejor: un lugar donde mentes afines, unidas por interéses comunes, puedan colaborar y compartir sus conocimientos. A lo largo de este proyecto, no solo consolidé las bases de Astro -la tecnología que da vida a este blog-, sino que también crecí como persona y como profesional. El código que sustenta este blog está en el siguiente repositorio: [EngiBlog](https://github.com/EngiBlog547/EngiBlog).
+Originalmente se concibió que este espacio fuera un blog personal, pero la reflexión me llevó a un lugar mejor: un lugar donde mentes afines, unidas por intereses comunes, puedan colaborar y compartir sus conocimientos. A lo largo de este proyecto, no solo consolidé las bases de Astro -la tecnología que da vida a este blog-, sino que también crecí como persona y como profesional. El código que sustenta este blog está en el siguiente repositorio: [EngiBlog](https://github.com/EngiBlog547/EngiBlog).
 
 ## Características del blog
 Dada mi formación en ciencia, EngiBlog está equipado para abrazar la precisión y elegancia de las disciplinas técnicas. Una de sus características es el soporte para escritura en LaTeX, un lenguaje que da vida a las matemáticas y ciencias con claridad y belleza. Si deseas explorar el dominio, te recomiendo visitar el sitio web oficial de LaTeX [aquí](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
@@ -23,7 +23,7 @@ $$
 x=\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
 ```
-Y en el blog se renderiza con precisión matemáica de la siguiente forma:
+Y en el blog se renderiza con precisión matemática de la siguiente forma:
 $$
 x=\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$

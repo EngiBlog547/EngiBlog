@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Entendiendo los Tensores: La Piedra Angular de las Redes Neuronales"
-date: 2026-01-16 # YYYY-MM-DD
+date: 2026-01-16T00:00:00 # YYYY-MM-DD
 author: Emmanuel Chávez
 image: { src: "/images/posts/WallPapers/Tensores-P1.png", alt: "Tensores" }
 description: En esta primera parte de nuestra saga sobre Machine Learning y Deep Learning, exploramos los tensores de manera sencilla. Descubre qué son, por qué importan en la computación y algunas curiosidades del mundo físico que los inspiran.
