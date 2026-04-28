@@ -1,6 +1,5 @@
 const categoryMap = {
     'math': 'Mates',
-    'maths': 'Mates',
     'physics': 'Física',
     'tech': 'Tecnología',
     'soft-skills': 'Habilidades Blandas',
