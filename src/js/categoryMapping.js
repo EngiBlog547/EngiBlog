@@ -1,4 +1,5 @@
 const categoryMap = {
+    'experience': 'Experiencias',
     'math': 'Mates',
     'physics': 'Física',
     'tech': 'Tecnología',

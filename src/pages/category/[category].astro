@@ -7,6 +7,10 @@ import { slugify, formatBlogPosts } from '../../js/utils'
 export async function getStaticPaths() {
   return [
     {
+        params: { category: slugify("Experience")},
+        props: { name: "Experiencias" },
+    },
+    {
         params: { category: slugify("Soft Skills")},
         props: { name: "Habilidades Blandas" },
     },
